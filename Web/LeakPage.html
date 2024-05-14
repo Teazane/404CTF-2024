@@ -1,0 +1,654 @@
+<!-- 
+HTTP/2 200 OK
+Date: Thu, 02 May 2024 16:29:18 GMT
+Content-Type: text/html
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN 
+-->
+
+<!DOCTYPE html>
+<html lang="fr" data-astro-cid-uwv4mmhs>
+
+<head><!-- Global Metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <meta name="generator" content="Astro v4.1.1">
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://exploit-mag.challenges.404ctf.fr/news/dataleak-404-ctf/">
+    <!-- Primary Meta Tags -->
+    <title>Dataleak au 404 CTF : la liste des épreuves sportives en exclusivité sur Exploit Mag</title>
+    <meta name="title" content="Dataleak au 404 CTF : la liste des épreuves sportives en exclusivité sur Exploit Mag">
+    <meta name="description"
+        content="Révélation exclusive : découvrez la liste complète des épreuves sportives du 404 CTF, suite à une fuite de données majeure.">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://exploit-mag.challenges.404ctf.fr/news/dataleak-404-ctf/">
+    <meta property="og:title"
+        content="Dataleak au 404 CTF : la liste des épreuves sportives en exclusivité sur Exploit Mag">
+    <meta property="og:description"
+        content="Révélation exclusive : découvrez la liste complète des épreuves sportives du 404 CTF, suite à une fuite de données majeure.">
+    <meta property="og:image" content="https://exploit-mag.challenges.404ctf.fr/dataleak-404-ctf.png">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://exploit-mag.challenges.404ctf.fr/news/dataleak-404-ctf/">
+    <meta property="twitter:title"
+        content="Dataleak au 404 CTF : la liste des épreuves sportives en exclusivité sur Exploit Mag">
+    <meta property="twitter:description"
+        content="Révélation exclusive : découvrez la liste complète des épreuves sportives du 404 CTF, suite à une fuite de données majeure.">
+    <meta property="twitter:image" content="https://exploit-mag.challenges.404ctf.fr/dataleak-404-ctf.png">
+    <link rel="stylesheet" href="/_astro/index.ZoVF7kNB.css" />
+    <style>
+        :root {
+            --accent: #2337ff;
+            --accent-dark: #000d8a;
+            --black: 15, 18, 25;
+            --gray: 96, 115, 159;
+            --gray-light: 229, 233, 240;
+            --gray-dark: 34, 41, 57;
+            --gray-gradient: rgba(var(--gray-light), 50%), #fff;
+            --box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%), 0 16px 32px rgba(var(--gray), 33%)
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            text-align: left;
+            background: linear-gradient(var(--gray-gradient)) no-repeat;
+            background-size: 100% 600px;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            color: rgb(var(--gray-dark));
+            font-size: 20px;
+            line-height: 1.7
+        }
+
+        main {
+            width: 720px;
+            max-width: calc(100% - 2em);
+            margin: auto;
+            padding: 3em 1em
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0 0 .5rem;
+            color: rgb(var(--black));
+            line-height: 1.2;
+            font-weight: 700
+        }
+
+        h1 {
+            font-size: 3.052em
+        }
+
+        h2 {
+            font-size: 2.441em
+        }
+
+        h3 {
+            font-size: 1.953em
+        }
+
+        h4 {
+            font-size: 1.563em
+        }
+
+        h5 {
+            font-size: 1.25em
+        }
+
+        strong,
+        b {
+            font-weight: 700
+        }
+
+        a,
+        a:hover {
+            color: var(--accent)
+        }
+
+        p {
+            margin-bottom: 1em
+        }
+
+        .prose p {
+            margin-bottom: 2em
+        }
+
+        textarea {
+            width: 100%;
+            font-size: 16px
+        }
+
+        input {
+            font-size: 16px
+        }
+
+        table {
+            width: 100%
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px
+        }
+
+        code {
+            padding: 2px 5px;
+            background-color: rgb(var(--gray-light));
+            border-radius: 2px
+        }
+
+        pre {
+            padding: 1.5em;
+            border-radius: 8px
+        }
+
+        pre>code {
+            all: unset
+        }
+
+        blockquote {
+            border-left: 4px solid var(--accent);
+            padding: 0 0 0 20px;
+            margin: 0;
+            font-size: 1.333em
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid rgb(var(--gray-light))
+        }
+
+        @media (max-width: 720px) {
+            body {
+                font-size: 18px
+            }
+
+            main {
+                padding: 1em
+            }
+        }
+
+        .sr-only {
+            border: 0;
+            padding: 0;
+            margin: 0;
+            position: absolute !important;
+            height: 1px;
+            width: 1px;
+            overflow: hidden;
+            clip: rect(1px 1px 1px 1px);
+            clip: rect(1px, 1px, 1px, 1px);
+            -webkit-clip-path: inset(50%);
+            clip-path: inset(50%);
+            white-space: nowrap
+        }
+
+        a[data-astro-cid-eimmu3lg] {
+            display: inline-block;
+            text-decoration: none
+        }
+
+        a[data-astro-cid-eimmu3lg].active {
+            font-weight: bolder;
+            text-decoration: underline
+        }
+
+        header[data-astro-cid-3ef6ksr2] {
+            margin: 0;
+            padding: 0 1em;
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(var(--black), 5%)
+        }
+
+        h2[data-astro-cid-3ef6ksr2] {
+            margin: 0;
+            font-size: 1em
+        }
+
+        h2[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2],
+        h2[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2].active {
+            text-decoration: none
+        }
+
+        nav[data-astro-cid-3ef6ksr2] {
+            display: flex;
+            align-items: center;
+            justify-content: space-between
+        }
+
+        nav[data-astro-cid-3ef6ksr2]>div[data-astro-cid-3ef6ksr2],
+        nav[data-astro-cid-3ef6ksr2]>h2[data-astro-cid-3ef6ksr2] {
+            flex: 1
+        }
+
+        .internal-links[data-astro-cid-3ef6ksr2] {
+            display: flex;
+            flex-direction: row;
+            justify-content: center
+        }
+
+        nav[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2] {
+            padding: 1em .5em;
+            color: var(--black);
+            border-bottom: 4px solid transparent;
+            text-decoration: none
+        }
+
+        nav[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2].active {
+            text-decoration: none;
+            border-bottom-color: var(--accent)
+        }
+
+        .social-links[data-astro-cid-3ef6ksr2],
+        .social-links[data-astro-cid-3ef6ksr2] a[data-astro-cid-3ef6ksr2] {
+            display: flex;
+            justify-content: flex-end
+        }
+
+        @media (max-width: 720px) {
+            .social-links[data-astro-cid-3ef6ksr2] {
+                display: none
+            }
+
+            .internal-links[data-astro-cid-3ef6ksr2] {
+                justify-content: flex-end
+            }
+        }
+
+        footer[data-astro-cid-sz7xmlte] {
+            padding: 2em 1em 6em;
+            background: linear-gradient(var(--gray-gradient)) no-repeat;
+            color: rgb(var(--gray));
+            text-align: center
+        }
+
+        main[data-astro-cid-uwv4mmhs] {
+            width: calc(100% - 2em);
+            max-width: 100%;
+            margin: 0
+        }
+
+        .hero-image[data-astro-cid-uwv4mmhs] {
+            width: 100%
+        }
+
+        .hero-image[data-astro-cid-uwv4mmhs] img[data-astro-cid-uwv4mmhs] {
+            display: block;
+            margin: 0 auto;
+            border-radius: 12px;
+            box-shadow: var(--box-shadow)
+        }
+
+        .prose[data-astro-cid-uwv4mmhs] {
+            width: 720px;
+            max-width: calc(100% - 2em);
+            margin: auto;
+            padding: 1em;
+            color: rgb(var(--gray-dark))
+        }
+
+        .title[data-astro-cid-uwv4mmhs] {
+            margin-bottom: 1em;
+            padding: 1em 0;
+            text-align: center;
+            line-height: 1
+        }
+
+        .title[data-astro-cid-uwv4mmhs] h1[data-astro-cid-uwv4mmhs] {
+            margin: 0 0 .5em
+        }
+
+        .date[data-astro-cid-uwv4mmhs] {
+            margin-bottom: .5em;
+            color: rgb(var(--gray))
+        }
+
+        .last-updated-on[data-astro-cid-uwv4mmhs] {
+            font-style: italic
+        }
+
+        .captcha[data-astro-cid-i5xthjb2] {
+            background-color: #f9f9f9;
+            border: 2px solid #d3d3d3;
+            border-radius: 5px;
+            color: #4c4a4b;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%
+        }
+
+        @media screen and (max-width: 500px) {
+            .captcha[data-astro-cid-i5xthjb2] {
+                flex-direction: column
+            }
+
+            .text[data-astro-cid-i5xthjb2] {
+                margin: .5em !important;
+                text-align: center
+            }
+
+            .logo[data-astro-cid-i5xthjb2] {
+                align-self: center !important
+            }
+
+            .spinner[data-astro-cid-i5xthjb2] {
+                margin: 2em .5em .5em !important
+            }
+        }
+
+        .text[data-astro-cid-i5xthjb2] {
+            font-size: 1em;
+            font-weight: 500;
+            margin-right: 1em
+        }
+
+        .spinner[data-astro-cid-i5xthjb2] {
+            position: relative;
+            width: 2em;
+            height: 2em;
+            display: flex;
+            margin: 2em 1em;
+            align-items: center;
+            justify-content: center
+        }
+
+        input[data-astro-cid-i5xthjb2][type=checkbox] {
+            position: absolute;
+            opacity: 0;
+            z-index: -1
+        }
+
+        input[data-astro-cid-i5xthjb2][type=checkbox]+.checkmark[data-astro-cid-i5xthjb2] {
+            display: inline-block;
+            width: 1.5em;
+            height: 1.5em;
+            background-color: #fcfcfc;
+            border: 2.5px solid #c3c3c3;
+            border-radius: 3px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer
+        }
+
+        input[data-astro-cid-i5xthjb2][type=checkbox]+.checkmark[data-astro-cid-i5xthjb2] span[data-astro-cid-i5xthjb2] {
+            content: "";
+            position: relative;
+            margin-top: -3px;
+            transform: rotate(45deg);
+            width: .75em;
+            height: 1.2em;
+            opacity: 0
+        }
+
+        input[data-astro-cid-i5xthjb2][type=checkbox]+.checkmark[data-astro-cid-i5xthjb2]>span[data-astro-cid-i5xthjb2]:after {
+            content: "";
+            position: absolute;
+            display: block;
+            height: 3px;
+            bottom: 0;
+            left: 0;
+            background-color: #991b1b
+        }
+
+        input[data-astro-cid-i5xthjb2][type=checkbox]+.checkmark[data-astro-cid-i5xthjb2]>span[data-astro-cid-i5xthjb2]:before {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 3px;
+            bottom: 0;
+            right: 0;
+            background-color: #991b1b
+        }
+
+        input[data-astro-cid-i5xthjb2][type=checkbox]:checked+.checkmark[data-astro-cid-i5xthjb2] {
+            animation: 2s spin infinite forwards
+        }
+
+        input[data-astro-cid-i5xthjb2][type=checkbox]:checked+.checkmark[data-astro-cid-i5xthjb2]>span[data-astro-cid-i5xthjb2]:after {
+            animation: .3s bottomslide 2s forwards
+        }
+
+        input[data-astro-cid-i5xthjb2][type=checkbox]:checked+.checkmark[data-astro-cid-i5xthjb2]>span[data-astro-cid-i5xthjb2]:before {
+            animation: .5s rightslide 2.2s forwards
+        }
+
+        @keyframes fadein {
+            0% {
+                opacity: 0
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes bottomslide {
+            0% {
+                width: 0
+            }
+
+            to {
+                width: 100%
+            }
+        }
+
+        @keyframes rightslide {
+            0% {
+                height: 0
+            }
+
+            to {
+                height: 100%
+            }
+        }
+
+        .logo[data-astro-cid-i5xthjb2] {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+            align-self: flex-end;
+            margin: .5em 1em
+        }
+
+        .logo[data-astro-cid-i5xthjb2] img[data-astro-cid-i5xthjb2] {
+            height: 1.5em;
+            width: 1.5em
+        }
+
+        .logo[data-astro-cid-i5xthjb2] p[data-astro-cid-i5xthjb2] {
+            color: #9d9ba7;
+            font-size: .8em;
+            font-weight: 700;
+            margin: .4em 0 .2em
+        }
+
+        .logo[data-astro-cid-i5xthjb2] small[data-astro-cid-i5xthjb2] {
+            color: #9d9ba7;
+            margin: 0;
+            font-size: .6em
+        }
+
+        @keyframes spin {
+            10% {
+                width: 0;
+                height: 0;
+                border-width: 6px
+            }
+
+            30% {
+                width: 0;
+                height: 0;
+                border-radius: 50%;
+                border-width: 1em;
+                transform: rotate(0);
+                border-color: #c7daf5
+            }
+
+            50% {
+                width: 2em;
+                height: 2em;
+                border-radius: 50%;
+                border-width: 4px;
+                border-color: #c7daf5;
+                border-right-color: #5998ef
+            }
+
+            70% {
+                border-width: 4px;
+                border-color: #c7daf5;
+                border-right-color: #5998ef
+            }
+
+            90% {
+                border-width: 4px
+            }
+
+            to {
+                width: 2em;
+                height: 2em;
+                border-radius: 50%;
+                transform: rotate(720deg);
+                border-color: #c7daf5
+            }
+        }
+
+        ::selection [data-astro-cid-i5xthjb2] {
+            background-color: transparent;
+            color: teal
+        }
+
+        ::-moz-selection [data-astro-cid-i5xthjb2] {
+            background-color: transparent;
+            color: teal
+        }
+    </style>
+    <script type="module" src="/_astro/hoisted.3KDSlyJR.js"></script>
+</head>
+
+<body data-astro-cid-uwv4mmhs>
+    <header data-astro-cid-3ef6ksr2>
+        <nav data-astro-cid-3ef6ksr2>
+            <h2 data-astro-cid-3ef6ksr2><a href="/" data-astro-cid-3ef6ksr2>Exploit Mag</a></h2>
+            <div class="internal-links" data-astro-cid-3ef6ksr2> <a href="/" data-astro-cid-3ef6ksr2
+                    data-astro-cid-eimmu3lg> Accueil </a> <a href="/news" data-astro-cid-3ef6ksr2
+                    data-astro-cid-eimmu3lg> Articles </a> <a href="/pricing" data-astro-cid-3ef6ksr2
+                    data-astro-cid-eimmu3lg> Tarifs </a> </div>
+            <div class="social-links" data-astro-cid-3ef6ksr2> <a style="cursor: pointer;" id="trophy">🏆</a> </div>
+        </nav>
+    </header>
+    <main data-astro-cid-uwv4mmhs>
+        <article data-astro-cid-uwv4mmhs>
+            <div class="hero-image" data-astro-cid-uwv4mmhs> <img width="1020" height="510" src="/dataleak-404-ctf.png" alt="" data-astro-cid-uwv4mmhs> </div>
+            <div class="prose" data-astro-cid-uwv4mmhs>
+                <div class="title" data-astro-cid-uwv4mmhs>
+                    <div class="date" data-astro-cid-uwv4mmhs> <time datetime="2024-01-17T00:00:00.000Z"> Jan 17, 2024 </time> </div>
+                    <h1 data-astro-cid-uwv4mmhs>Dataleak au 404 CTF : la liste des épreuves sportives en exclusivité sur Exploit Mag</h1>
+                    <hr data-astro-cid-uwv4mmhs>
+                </div> Exploit Mag a obtenu en exclusivité des informations suite à une fuite de données concernant le
+                très attendu 404 CTF. Cette compétition sportive, célèbre pour ses épreuves innovantes et son esprit
+                compétitif, fait face à une révélation inattendue. Voici la liste complète des épreuves sportives,
+                divulguée avant l&#39;annonce officielle.
+                <div class="relative">
+                    <p class="blur-sm">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo, atque
+                        voluptatum. Odit, ipsum possimus? In at placeat, dolor repudiandae
+                        enim rerum quidem reiciendis odio quas reprehenderit necessitatibus
+                        voluptatem blanditiis alias. Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Odit quis quibusdam esse magnam laboriosam ipsa
+                        nihil quae totam ullam repellendus! Magni incidunt corporis rem eum
+                        placeat, quisquam debitis cumque voluptatum.
+                    </p>
+                    <p class="blur-sm">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo, atque
+                        voluptatum. Odit, ipsum possimus? In at placeat, dolor repudiandae
+                        enim rerum quidem reiciendis odio quas reprehenderit necessitatibus
+                        voluptatem blanditiis alias. Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Odit quis quibusdam esse magnam laboriosam ipsa
+                        nihil quae totam ullam repellendus! Magni incidunt corporis rem eum
+                        placeat, quisquam debitis cumque voluptatum.
+                    </p>
+                    <div id="paywall"
+                        class="not-prose absolute top-0 mb-4 mt-10 rounded-lg border border-red-300 bg-red-50 p-4 text-red-800 dark:border-red-800 dark:bg-gray-800 dark:text-red-400"
+                        role="alert">
+                        <div class="flex items-center">
+                            <h3 class="mt-0 text-lg  text-red-800">
+                                Veuillez payer pour accéder à l'article complet
+                            </h3>
+                        </div>
+                        <div class="mb-4 mt-2 text-sm">
+                            Cet article est réservé aux membres premiums. Les visiteurs
+                            classiques ne peuvent pas le lire. Veuillez payer pour accéder au
+                            contenu de l'article.
+                        </div>
+                        <div class="flex">
+                            <button data-modal-target="popup-modal" data-modal-toggle="popup-modal" type="button"
+                                class="me-2 inline-flex items-center rounded-lg bg-red-800 px-3 py-1.5 text-center text-xs font-medium text-white hover:bg-red-900 focus:outline-none focus:ring-4 focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800">
+                                <svg class="me-2 h-3 w-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
+                                    <path
+                                        d="M17 5.923A1 1 0 0 0 16 5h-3V4a4 4 0 1 0-8 0v1H2a1 1 0 0 0-1 .923L.086 17.846A2 2 0 0 0 2.08 20h13.84a2 2 0 0 0 1.994-2.153L17 5.923ZM7 9a1 1 0 0 1-2 0V7h2v2Zm0-5a2 2 0 1 1 4 0v1H7V4Zm6 5a1 1 0 1 1-2 0V7h2v2Z">
+                                    </path>
+                                </svg>
+                                Accéder à l'article
+                            </button>
+                            <div id="popup-modal" tabindex="-1"
+                                class="fixed left-0 right-0 top-0 z-50 hidden h-[calc(100%-1rem)] max-h-full w-full items-center justify-center overflow-y-auto overflow-x-hidden md:inset-0">
+                                <div class="relative max-h-full w-full max-w-md p-4">
+                                    <div class="relative rounded-lg bg-white shadow dark:bg-gray-700">
+                                        <button type="button"
+                                            class="absolute end-2.5 top-3 ms-auto inline-flex h-8 w-8 items-center justify-center rounded-lg bg-transparent text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-white"
+                                            data-modal-hide="popup-modal"> 
+                                            <svg class="h-3 w-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"></path>
+                                            </svg>
+                                            <span class="sr-only">Close modal</span>
+                                        </button>
+                                        <div class="p-4 text-center md:p-5">
+                                            <svg class="mx-auto mb-4 h-12 w-12 text-gray-400 dark:text-gray-200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 11V6m0 8h.01M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"></path>
+                                            </svg>
+                                            <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">
+                                                Avant de procéder au paiement, nous devons vérifier que vous êtes
+                                                humain.<br> Cela peut prendre <b>très</b> longtemps.
+                                            </h3>
+                                            <div class="captcha" data-astro-cid-i5xthjb2>
+                                                <div class="spinner" data-astro-cid-i5xthjb2> 
+                                                    <label data-astro-cid-i5xthjb2> 
+                                                        <input type="checkbox" onclick="this.setAttribute('disabled', 'disabled');" data-astro-cid-i5xthjb2> 
+                                                        <span class="checkmark" data-astro-cid-i5xthjb2><span data-astro-cid-i5xthjb2>&nbsp;</span></span> 
+                                                    </label>
+                                                </div>
+                                                <div class="text" data-astro-cid-i5xthjb2>I'm not a robot</div>
+                                                <div class="logo" data-astro-cid-i5xthjb2> 
+                                                    <img src="https://forum.nox.tv/core/index.php?media/9-recaptcha-png/" data-astro-cid-i5xthjb2>
+                                                    <p data-astro-cid-i5xthjb2>raCAPTCHA</p> 
+                                                    <small data-astro-cid-i5xthjb2>Privacy - Terms</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+    <footer data-astro-cid-sz7xmlte>
+        &copy; 2024 Exploit Mag. Tous droits réservés.
+    </footer>
+</body>
+
+</html>
