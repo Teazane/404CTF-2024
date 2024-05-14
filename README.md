@@ -150,9 +150,9 @@ Mais en allant à https://en-retard.challenges.404ctf.fr/devant-le-match on reto
 
 On voit dans le CSS un commentaire disant que le panneau cache le bouton "Entrer de le stade". Je passe donc la div à hidden="True". On voit effectivement un bouton. Le clic mène à la page https://en-retard.challenges.404ctf.fr/donnez-moi-mon-ticket-pitie. On tourne en rond...
 
-Je teste l'autre URL du script : /set_cookie. On retourne à la page d'accueil mais avec un cookie cette fois du nom de "fraude" avec valeur "true". Je change à "false". La veleur n'est pas retenue, je passe via Burp. 
+Je teste l'autre URL du script : /set_cookie. On retourne à la page d'accueil mais avec un cookie cette fois du nom de "fraude" avec valeur "true". Je change à "false". Ca ne change rien, je passe sur [Burp](https://portswigger.net/burp/communitydownload). 
 
-Après un plombe à galérer, je teste juste la requête POST /set_cookie dans Rester et ça renvoie notamment : `set-cookie: allergies=404CTF{gluten-sucre-au-sucre}`. JPP.
+Après un plombe à galérer, je teste juste la requête POST /set_cookie dans [RESTer](https://addons.mozilla.org/fr/firefox/addon/rester/) et ça renvoie notamment : `set-cookie: allergies=404CTF{gluten-sucre-au-sucre}`. JPP.
 
 **Flag : 404CTF{gluten-sucre-au-sucre}**
 
@@ -290,9 +290,9 @@ On remarque ligne 81 un paquet HTTP de 192.168.78.89 vers 192.168.78.31 qui cont
 Je déobfusque et je trouve effectivement une [charge malveillante](/Investigation_numérique/Dart_bank_attack_script.txt_ps).
 Ce dernier cherche visiblement à envoyer une requête via Chrome avec des données vers http://192.168.78.89/index.html. 
 
-Accessoirement, dans la charge PS, on voit aussi une requête vers une URL, qu'on retrouve dans les échanges de paquets de la capture, dont on peut suivre la résolution DNS qui mène à une vidéo Youtube qui s'avère être, évidemment, un Rick roll. 
+Accessoirement, dans la charge PS, on voit aussi une requête vers une URL, qu'on retrouve dans les échanges de paquets de la capture, dont on peut suivre la résolution DNS qui mène à une vidéo Youtube qui s'avère être, évidemment, un rickroll. 
 
-**Solution expliquée par [TechieNeurons](https://github.com/TechieNeurons) dans son [write-up](https://github.com/TechieNeurons/404CTF_2024_write_up/tree/main/forensics/darts_bank), ou par [hayb](https://github.com/haybb) (en plus condensé) dans son [write up](https://github.com/haybb/CTF-Write-Ups/tree/main/Darts%20Bank):**
+**Solution expliquée par [TechieNeurons](https://github.com/TechieNeurons) dans son [write-up](https://github.com/TechieNeurons/404CTF_2024_write_up/tree/main/forensics/darts_bank), ou par [hayb](https://github.com/haybb) (en plus condensé) dans son [write up](https://github.com/haybb/CTF-Write-Ups/tree/main/Darts%20Bank) :**
 *Le script malveillant utilise le navigateur Chrome avec une option `--ssl-key-log-file` permettant de stocker un certificat SSL dans un fichier. Il contient également un script (contenant notamment une longue variable en bytes) qui est placé dans le registre. Ce script permet d'utiliser la clef SSL préalablement stockée, de xor chaque byte de la longue variable, puis d'envoyer ce résultat à présent chiffré. Dans les communications TCP suivantes, on peut récupérer ces données chiffrées envoyées (trouvables dans Wireshark en isolant les requêtes HTTP avec `http.request.method == POST`) en neuf paquets, les xor dans l'autre sens avec la longue liste de bytes que l'on connait, et ainsi récupérer la clef SSL. En entrant cette clef SSL dans Wireshark, on peut maintenant déchiffrer la communication TLS. On trouve un fichier envoyé par le hostname `dartsbank.challenges.404ctf.fr` qui contient le flag.*
 
 ## Stéganographie
@@ -317,7 +317,7 @@ Intitulé :
 
 On nous fournit [une image](/Stégano/chall_stega.png).
 
-Vu la tronche de l'image c'est de l'autostéréoscopie qu'il faut utiliser. J'arrive effectivement à le voir mais lire des lettres dans un stéréogramme, c'est chaud. J'utilise donc [un outil](https://piellardj.github.io/stereogram-solver/) qui me donne ceci : ![stéréogramme](/Stégano/stereogram_solve.png)
+Vu le style de l'image c'est de l'autostéréoscopie qu'il faut utiliser. J'arrive effectivement à le voir mais lire des lettres dans un stéréogramme, c'est chaud. J'utilise donc [un outil](https://piellardj.github.io/stereogram-solver/) qui me donne ceci : ![stéréogramme](/Stégano/stereogram_solve.png)
 
 Tu m'étonnes que j'arrivais pas à lire directement en 3D avec des lettres si fines...
 
@@ -341,7 +341,7 @@ UnMessagePasDuToutSuspect
 Si on tente de transformer ce fichier en .zip, le format obtenu est illisible.
 
 Si on tente de transformer ce fichier en .txt, on trouve une URL Youtube : https://www.youtube.com/watch?v=dQw4w9WgXcQ.
-C'est un bon vieux RickRoll. Haha.
+C'est un bon vieux rickroll. Haha.
 
 Avec IDA on peut analyser l'exécutable qui ne semble pas faire autre chose qu'afficher le message troll.
 
@@ -383,7 +383,7 @@ Pas inspirant...
 En fait il fallait s'y connaître en reverse.
 
 **Solution expliquée par [Nathorn](https://github.com/Narthorn) dans son [write-up](https://github.com/Narthorn/ctf/tree/master/2024-04-20_404CTF-2024/06.%20steg/La%20Barre%20Fixe) :** 
-*En observant de plus près les instructions qui permettent d'afficher le message troll, on voit que certaines sont [préfixées](https://wiki.osdev.org/X86-64_Instruction_Encoding#Legacy_Prefixes). Ces préfixes (il y en a quatre différents) n'ont pas vraiment de sens en x64 et sont toujours écrits dans le même ordre mais à différents endroits. Finalement, comme ces valeurs n'ont pas de sens, on peut se dire qu'elles sont remplaçables par des 1 et que les endroits où elles ne sont pas présentes sont assimilables à des 0. Ca donne des groupes de bits, qui vont deux par deux et s'avèrent être les deux moitiés inversées de caractères en ASCII. En convertissant ces caractères en ASCII, on retombe finalement sur le flag.
+*En observant de plus près les instructions qui permettent d'afficher le message troll, on voit que certaines sont [préfixées](https://wiki.osdev.org/X86-64_Instruction_Encoding#Legacy_Prefixes). Ces préfixes (il y en a quatre différents) n'ont pas vraiment de sens en x64 et sont toujours écrits dans le même ordre mais à différents endroits. Finalement, comme ces valeurs n'ont pas de sens, on peut se dire qu'elles sont remplaçables par des 1 et que les endroits où elles ne sont pas présentes sont assimilables à des 0. Ca donne des groupes de bits, qui vont deux par deux et s'avèrent être les deux moitiés inversées de caractères en ASCII. En convertissant ces caractères en ASCII, on retombe finalement sur le flag.*
 
 **FLAG : 404CTF{x86_64-iGnor3s-5TuFF}**
 
@@ -393,12 +393,12 @@ Intitulé :
 
 On nous fournit [un fichier](/Stégano/challenge.txt).
 
-C'est visiblement une édition de Moby-Dick avec beaucoup de caractères problématiques. On peut trouver en ligne le [texte original](https://archive.org/details/mobydickorwhale01melvuoft/page/n7/mode/2up). On le trouve aussi avec la phrase chelou du début à l'identique [sur Gist](https://gist.github.com/StevenClontz/4445774). Visiblement c'est la transcription en texte d'un livre scanné, d'où les caractères problématiques. Mais pas que : il y a plus de caractères bizarres dans notre version. 
+C'est visiblement une édition de Moby-Dick avec beaucoup de caractères problématiques. On peut trouver en ligne le [texte original](https://archive.org/details/mobydickorwhale01melvuoft/page/n7/mode/2up). On le trouve aussi avec la phrase étrange du début à l'identique [sur Gist](https://gist.github.com/StevenClontz/4445774). Visiblement c'est la transcription en texte d'un livre scanné, d'où les caractères problématiques. Mais pas que : il y a plus de caractères bizarres dans notre version. 
 
 **Solution expliquée par [Blaireau](https://github.com/Blaireau) dans son [write-up](https://github.com/Blaireau/404CTF-2024/blob/main/steganographie/grand_ecart/writeup.md):**
 > Certains caractères du fichier du challenge ont l'air d'être différent [de celui du dépôt Gist]. En analysant les différences entre les deux fichiers on se rend compte qu'à partir de la position 150, et tous les 30 caractères, les caractères sont différents. Cela dit les caractères récupérés de cette manière n'ont pas de cohérence, mais en faisant un XOR entre le caractère "original" et celui du fichier du challenge, on commence à obtenir le début du header d'un fichier PNG. [Génération de l'image à l'aide d'un script de son cru] Visiblement le challenge n'est pas fini... [...] En analysant le fichier avec **zSteg** on obtient le flag dans le canal suivant : `b1,rgba,lsb,xy .. text: "404CTF{you_spot_w3ll_the_differences}\n"`
 
-**Une autre version de l'explication par [NozZy](https://nozyzy.github.io/) dans son [write-up](https://nozyzy.github.io/posts/grand-ecart/).**
+**[Ici](https://nozyzy.github.io/posts/grand-ecart/), une autre version de l'explication par [NozZy](https://nozyzy.github.io/).**
 
 **Flag : 404CTF{you_spot_w3ll_the_differences}**
 
